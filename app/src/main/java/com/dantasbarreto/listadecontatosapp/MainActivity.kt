@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
@@ -12,24 +13,24 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        geralListaDeContatos()
+        geraListaDeContatos()
         setupToolBar(toolBar, "Lista de Contatos",false)
         setupRecyclerView()
         setupOnClicks()
     }
 
     private fun setupOnClicks() {
-        fab.setOnClickListenert { onClickAdd() }
+        fab.setOnClickListener { onClickAdd() }
         ivBuscar.setOnClickListener { onClickBuscar() }
     }
 
     private fun setupRecyclerView() {
-        recyclerView.LayoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = ContatoAdapter(this, ContatoSingleton.lista) { onClickItemRecyclerView(it) }
         recyclerView.adapter = adapter
     }
 
-    private fun geralListaDeContatos() {
+    private fun geraListaDeContatos() {
         ContatoSingleton.lista.add(ContatosVO(1, "Fulano", "(00) 9900-0001"))
         ContatoSingleton.lista.add(ContatosVO(2, "Beltrano", "(00) 9900-0002"))
         ContatoSingleton.lista.add(ContatosVO(3, "Ciclano", "(00) 9900-0003"))

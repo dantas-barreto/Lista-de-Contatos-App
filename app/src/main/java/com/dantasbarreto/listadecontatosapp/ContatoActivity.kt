@@ -1,14 +1,10 @@
 package com.dantasbarreto.listadecontatosapp
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
 import android.view.View
-import com.dantasbarreto.listadecontatosapp.R
-import com.dantasbarreto.listadecontatosapp.bases.BaseActivity
-import com.dantasbarreto.listadecontatosapp.feature.listacontatos.model.ContatosVO
-import com.dantasbarreto.listadecontatosapp.singleton.ContatoSingleton
 import kotlinx.android.synthetic.main.activity_contato.*
-import.kotlinx.android.synthetic.main.activity_contato.toolBar
+import kotlinx.android.synthetic.main.activity_contato.toolBar
 
 class ContatoActivity : BaseActivity() {
 
@@ -33,9 +29,9 @@ class ContatoActivity : BaseActivity() {
     }
 
     private fun onClickSalvarContato() {
-        val nome: String = etNome.text.toString()
-        val telefone: String = etTelefone.text.toString()
-        val contato = COntatosVO(
+        val nome = etNome.text.toString()
+        val telefone = etTelefone.text.toString()
+        val contato = ContatosVO(
             0,
             nome,
             telefone
