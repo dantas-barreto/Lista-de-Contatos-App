@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:andreid="http://schemas.android.com/apk/res/android"
+    andreid:layout_width="match_parent"
+    andreid:layout_height="wrap_content"
+    andreid:padding="16dp"
+    andreid:id="@+id/llItem">
+
+    <LinearLayout
+        andreid:layout_width="match_parent"
+        andreid:layout_height="wrap_content"
+        andreid:padding="16dp"
+        andreid:background="#616161"
+        andreid:orientation="vertical">
+
+        <TextView
+            andreid:id="@+id/tvNome"
+            andreid:textColor="#FFFFFF"
+            andreid:layout_width="wrap_content"
+            andreid:layout_height="wrap_content"
+            andreid:text="Nome contato: Teste"/>
+
+        <TextView
+            andreid:id="@+id/tvTelefone"
+            andreid:textColor="#FFFFFF"
+            andreid:layout_width="wrap_content"
+            andreid:layout_height="wrap_content"
+            andreid:text="Telefone contato: Teste"/>
+
+    </LinearLayout>
+
+</LinearLayout>
