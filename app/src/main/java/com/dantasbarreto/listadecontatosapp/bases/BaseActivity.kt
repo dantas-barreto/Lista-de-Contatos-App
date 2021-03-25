@@ -1,4 +1,4 @@
-package com.dantasbarreto.listadecontatosapp
+package com.dantasbarreto.listadecontatosapp.bases
 
 import android.R
 import android.view.MenuItem

@@ -1,16 +1,18 @@
-package com.dantasbarreto.listadecontatosapp
+package com.dantasbarreto.listadecontatosapp.features.listacontatos.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.dantasbarreto.listadecontatosapp.R
+import com.dantasbarreto.listadecontatosapp.features.listacontatos.model.ContatosVO
 import kotlinx.android.synthetic.main.item_contato.view.*
 
 class ContatoAdapter(
-    private val context: Context,
-    private val lista: List<ContatosVO>,
-    private val onClick: ((Int) -> Unit)
+        private val context: Context,
+        private val lista: List<ContatosVO>,
+        private val onClick: ((Int) -> Unit)
 ) : RecyclerView.Adapter<ContatoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContatoViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_contato, parent, false)
@@ -24,7 +26,7 @@ class ContatoAdapter(
         with(holder.itemView) {
             tvNome.text = contato.nome
             tvTelefone.text = contato.telefone
-            llItem.setOnClickListener { onClick(position) }
+            llItem.setOnClickListener { onClick(contato.id) }
         }
     }
 }

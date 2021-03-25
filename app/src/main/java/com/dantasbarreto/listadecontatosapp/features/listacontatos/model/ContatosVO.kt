@@ -1,4 +1,4 @@
-package com.dantasbarreto.listadecontatosapp
+package com.dantasbarreto.listadecontatosapp.features.listacontatos.model
 
 data class ContatosVO(
     var id: Int = -1,
