@@ -64,7 +64,7 @@ class MainActivity : BaseActivity() {
             runOnUiThread {
                 adapter = ContatoAdapter(this, listaFiltrada) { onClickItemRecyclerView(it) }
                 recyclerView.adapter = adapter
-                progress.visibility - View.GONE
+                progress.visibility = View.GONE
                 Toast.makeText(this, "Buscando por $busca", Toast.LENGTH_SHORT).show()
             }
         }).start()

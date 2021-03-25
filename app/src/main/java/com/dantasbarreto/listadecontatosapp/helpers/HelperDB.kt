@@ -21,11 +21,11 @@ class HelperDB(
     val COLUMNS_TELEFONE = "telefone"
     val DROP_TABLE = "DROP TABLE IF EXISTS $TABLE_NAME"
     val CREATE_TABLE = "CREATE TABLE $TABLE_NAME (" +
-            "$COLUMNS_ID INTEGER NOT NULL," +
-            "$COLUMNS_NOME TEXT NOT NULL," +
-            "$COLUMNS_TELEFONE TEXT NOT NULL," +
+            "$COLUMNS_ID INTEGER NOT NULL, " +
+            "$COLUMNS_NOME TEXT NOT NULL, " +
+            "$COLUMNS_TELEFONE TEXT NOT NULL, " +
             "" +
-            "PRIMARY KEY($COLUMNS_ID AUTOINCREMENT" +
+            "PRIMARY KEY ($COLUMNS_ID AUTOINCREMENT)" +
             ")"
 
     override fun onCreate(db: SQLiteDatabase?) {
