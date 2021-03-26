@@ -45,7 +45,7 @@ class HelperDB(
         var where: String? = null
         var  args: Array<String> = arrayOf()
         if (isBuscaPorID) {
-            where = "$COLUMNS_NOME LIKE ?"
+            where = "$COLUMNS_ID = ?"
             args = arrayOf("$busca")
         } else {
             where = "$COLUMNS_NOME LIKE ?"
